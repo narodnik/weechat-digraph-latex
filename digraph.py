@@ -8,7 +8,8 @@ weechat.register("digraph", "narodnik", "1.0", "GPL3",
                  "Digraphs like nvim for inputting math symbols",
                  "", "")
 
-weechat.hook_modifier("input_text_display", "modifier_cb", "")
+weechat.hook_modifier("input_text_display",    "modifier_cb", "")
+weechat.hook_modifier("input_text_for_buffer", "modifier_cb", "")
 
 sup_vals = "⁰¹²³⁴⁵⁶⁷⁸⁹ᵃᵇᶜᵈᵉᶠᵍʰⁱʲᵏˡᵐⁿᵒᵖʳˢᵗᵘᵛʷˣʸᶻ⁺⁻⁼⁽⁾"
 sup_keys = "0123456789abcdefghijklmnoprstuvwxyz+-=()"
