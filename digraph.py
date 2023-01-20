@@ -54,7 +54,7 @@ symbols = [
 
 special_symbols = [
     # Overline
-    ("bb", 773),
+    ("||", 773),
 ]
 
 greek_key = "abcdefghiklmnopqrstuwxyz"
