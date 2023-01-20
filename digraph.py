@@ -52,6 +52,11 @@ symbols = [
     ("(U", "∩"),
 ]
 
+special_symbols = [
+    # Overline
+    ("bb", 773),
+]
+
 greek_key = "abcdefghiklmnopqrstuwxyz"
 greek_cap = "ΑΒΞΔΕΦΓΘΙΚΛΜΝΟΠΨΡΣΤΥΩΧΗΖ"
 greek_min = "αβξδεφγθικλμνοπψρστυωχηζ"
@@ -62,6 +67,9 @@ END_EXPR = 2
 def build_replacement_table():
     table = []
     table.extend(symbols)
+    # Extended special symbols
+    for key, code in special_symbols:
+        table.append((key, chr(code)))
     # Superscript
     for key, val in zip(sup_keys, sup_vals):
         table.append((f"^{key}", val))
